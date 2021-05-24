@@ -1,0 +1,208 @@
+.about{
+    width: 100%;
+    background: linear-gradient(#090909, #1A1A1C, #1B1B1D);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .about-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 9rem auto 5rem auto;
+        padding: 2rem 1rem;
+        .about-left-right{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            gap: clamp(2rem, 4vw, 4rem);
+            .about-left{
+                width: 100%;
+                margin: 1rem auto;
+                padding: 1rem 1rem;
+                background-color: $white-txt;
+                overflow: hidden;
+                display: grid;
+                position: relative;
+                border-radius: .2rem;
+                opacity: 0;
+                transform: scale(0, 1);
+                transform-origin: center;
+                h4{
+                    font-size: 2rem;
+                    color: $dark-bg;
+                    margin: 2rem 0;
+                    margin-left: 2rem;
+                    opacity: 0;
+                }
+                h6{
+                    font-size: 1.2rem;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    color: $dark-bg;
+                    margin-left: 2rem;
+                    text-align: justify;
+                    opacity: 0;
+                    font-weight: 100;
+                }
+                .about-button{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: inline-block;
+                    background-color:#808080;
+                    color: #fff;
+                    transition: .3s;
+                    display: flex;
+                    font-size: 1.25rem;
+                    height: 100%;
+                    width: 6%;
+                    p{
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        font-family: "Bebas Neue", sans-serif;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                    }
+                }
+            }
+            .about-right{
+                width: 100%;
+                grid-template-rows: repeat(2,1fr);
+                margin: 1rem 1rem;
+                padding: 0 1rem;
+                .about-top{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    border-left: 2rem solid $dark-bg;
+                    padding: 1rem 1rem;
+                    background-color: #1B1B1D;
+                    position: relative;
+                    opacity: 0;
+                    h4{
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    h6{
+                        font-size: 1.1rem;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        text-align: justify;
+                        font-weight: 100;
+                    }
+                    a{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        display: inline-block;
+                        background-color:#808080;
+                        color: #fff;
+                        transition: .3s;
+                        font-size: 1rem;
+                        padding: .4rem 1rem;
+                        border-radius: 1rem 0 .2rem 0;
+                    }
+                }
+                .about-bottom{
+                    width: 100%;
+                    border-left: 2rem solid $dark-bg;
+                    padding: 1rem 1rem;
+                    background-color: #1B1B1D;
+                    position: relative;
+                    opacity: 0;
+                    padding: 1rem 1rem 2rem 1rem;
+                    h4{
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    h6{
+                        font-size: 1.1rem;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        text-align: justify;
+                        font-weight: 100;
+                    }
+                    a{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        display: inline-block;
+                        background-color:#808080;
+                        color: #fff;
+                        transition: .3s;
+                        display: flex;
+                        font-size: 1rem;
+                        padding: .4rem 1rem;
+                        border-radius: 1rem 0 .2rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .about{
+        display: flex;
+        justify-content: initial;
+        align-items: initial;
+        flex-direction: initial;
+        .about-container{
+            margin-top: 4rem;
+            .about-left-right{
+                grid-template-columns: 1fr;
+                gap: initial;
+                margin: initial;
+                display: initial;
+                padding: initial;
+                .about-left{
+                    h4{
+                        font-size: clamp(1.5rem, 6vw, 2rem);
+                        margin-bottom: 1rem;
+                    }
+                    h6{
+                        font-size: clamp(.5rem, 6vw, .7rem);
+                    }
+                    .about-button{
+                        font-size: clamp(.5rem, 6vw, .7rem);
+                        p{
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .about-right{
+                    grid-template-rows: 1fr;
+                    margin: initial;
+                    padding: initial;
+                    .about-top{
+                        h4{
+                            font-size: clamp(1.5rem, 6vw, 2rem);
+                            margin-bottom: 1rem;
+                        }
+                        h6{
+                            font-size: clamp(.5rem, 6vw, .7rem);
+                        }
+                        a{
+                            padding: .1rem .6rem;
+                        }
+                    }
+                    .about-bottom{
+                        padding: 1rem 1rem 1rem 1rem;
+                        h4{
+                            font-size: clamp(1.5rem, 6vw, 2rem);
+                            margin-bottom: 1rem;
+                        }
+                        h6{
+                            font-size: clamp(.5rem, 6vw, .7rem);
+                        }
+                        a{
+                            padding: .1rem .6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

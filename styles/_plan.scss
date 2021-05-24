@@ -1,0 +1,111 @@
+.plan{
+    width: 100%;
+    background: $white-txt;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .plan-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 15rem auto 7rem auto;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        .plan-left{
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            h6{
+                color: $dark-bg;
+                font-size: clamp(3rem, 1vw, 4rem);
+            }
+        }
+        .plan-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+            opacity: 0;
+            .right-upper,
+            .right-lower {
+              display: flex;
+              gap: 4rem;
+              justify-content: space-around;
+              .right-container{
+                  margin: .5rem;
+                  width: 100%;
+                    max-width: 300px;
+                  h6{
+                      color: $dark-bg;
+                      font-size: clamp(1.9rem, 1vw, 2.4rem);
+                      i{
+                          margin-left: 5px;
+                      }
+                  }
+                  p{
+                    font-size: clamp(1rem, 1vw, 1.3rem);
+                    margin-top: .5rem;
+                    color: #1A1A1C;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-weight: 100;
+                  }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .plan{
+        .plan-container{
+            margin: 15rem auto 3rem auto;
+            grid-template-columns: 1fr;
+            .plan-left{
+                margin-bottom:1rem;
+            }
+            .plan-right{
+                .right-upper,
+                .right-lower {
+                  .right-container{
+                      h6{
+                          color: $dark-bg;
+                          font-size: clamp(1.2rem, 1vw, 1rem);
+                      }
+                      p{
+                        font-size: clamp(.8rem, 1vw, 1.3rem);
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .plan{
+        .plan-container{
+            margin: 4rem auto 3rem auto;
+            grid-template-columns: 1fr;
+            .plan-left{
+                margin-bottom: 1rem;
+                h6{
+                    font-size: clamp(2rem, 1vw, 3rem);
+                }
+            }
+            .plan-right{
+                .right-upper,
+                .right-lower {
+                  .right-container{
+                      h6{
+                          color: $dark-bg;
+                          font-size: clamp(1.12rem, 1vw, 1rem);
+                      }
+                      p{
+                        font-size: clamp(.8rem, 1vw, 1.3rem);
+                      }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.hero {
+    background-color: $dark-bg;
+    height: 100vh;
+    position: relative;
+    margin-top: -98px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    .hero-bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .hero-img-bg{
+            width: 100%;
+            margin-left: 10%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+    .hero-container{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 0;
+        padding: 0 1rem;
+        .main-text{
+            margin-top: 8rem;
+            animation: float 2s ease-out forwards;
+            h1{
+                font-size: clamp(6rem, 6vw, 7rem);
+                background: -webkit-linear-gradient(#F7F8F8, #B8B8B8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .right-left{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            gap: clamp(2rem, 4vw, 4rem);
+            margin-top: 6rem;
+            .left-col{
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                width: 100%;
+                .left-text{
+                    opacity: 0;
+                    animation: float 1s ease-out forwards 1.5s;
+                    h6{
+                        font-size: clamp(.8rem, 1vw, 1rem);
+                        font-family: 'Noto Sans JP', sans-serif;
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    .button-first{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        padding: 1rem 1.5rem;
+                        margin-top: 2rem;
+                        opacity: 0;
+                        animation: float 1s ease-out forwards 2.5s;
+                        border-radius: 3px;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        margin-right: 1rem;
+                    }
+                    .button-second{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        padding: 1rem 1rem;
+                        margin-top: 2rem;
+                        opacity: 0;
+                        animation: float 1s ease-out forwards 3s;
+                        border-radius: 3px;
+                        font-family: 'Noto Sans JP', sans-serif;
+                        background-color: $dark-bg;
+                        color: $white-txt;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        i{
+                            font-size: 1.5rem;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 766px) {
+    .hero{
+        margin-top: calc(95px + 0rem);
+        display: flex;
+        justify-content: initial;
+        align-items: initial;
+        flex-direction: initial;
+        .hero-container{
+            .main-text{
+                margin-top: 4rem;
+                h1{
+                    font-size: clamp(2.5rem, 6vw, 5rem);
+                }
+            }
+            .right-left{
+                grid-template-columns: 1fr;
+                .left-col{
+                    .buttons{
+                        .button-first{
+                            font-size: .8rem;
+                            padding: .5rem .5rem;
+                        }
+                        .button-second{
+                            font-size: .8rem;
+                            padding: .5rem .5rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

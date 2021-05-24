@@ -1,0 +1,154 @@
+.pioneers{
+    width: 100%;
+    background-color: #1B1B1D;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    .pioneers-container{
+        width: 100%;
+        max-width: 1200px;
+        padding: 2rem 1rem;
+        .pioneers-title{
+            opacity: 0;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-top: -20rem;
+            margin-bottom: 5rem;
+            h1{
+                font-size: clamp(2rem, 6vw, 2.5rem);
+                font-family: 'Noto Sans JP', sans-serif;
+                font-weight: 100;
+            }
+        }
+        .pioneers-glide{
+            position: absolute;
+            max-width: 1500px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            .card-img{
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .card-name{
+                width: 100%;
+                position: relative;
+                h6{
+                    font-size: clamp(.5rem, 6vw, 1rem);
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-weight: 100;
+                    color: $dark-bg;
+                }
+                a{
+                    position: absolute;
+                    bottom: 0;
+                    background-color: $dark-bg;
+                    color: $white-txt;
+                    right: 0;
+                    display: inline-block;
+                    transition: .3s;
+                    display: flex;
+                    font-size: 1rem;
+                    padding: .4rem 1rem;
+                    border-radius: 1rem 0 .2rem 0;
+                }
+            }
+            .glide__arrows{
+                position: absolute;
+                top: -100px;
+                right: 160px;
+                .glide__arrow{
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 30px;
+                    border: none;
+                    text-align: center;
+                    border-radius: 50%;
+                    padding: 0;
+                }
+                .glide__arrow--left{
+                    left: 0;
+                }
+                .glide__arrow--right{
+                    right: -100px;
+                }
+            }
+          
+        }
+       
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .pioneers{
+        display: flex;
+        height: 60vh;
+        .pioneers-container{
+            margin-top: 300px;
+            .pioneers-title{
+                margin-top: -25rem;
+                
+                h1{
+                    font-size: clamp(1rem, 6vw, 2.5rem);
+                }
+            }
+            .pioneers-glide{
+                position: relative;
+                max-width: 900px;
+                width: 100%;
+                height: 10px;
+                .card-name{
+                    h6{
+                        font-size: clamp(.5rem, 6vw, .6rem);
+                    }
+                    p{
+                        font-size: clamp(.5rem, 6vw, .6rem);
+                    }
+                   
+                }
+                .glide__arrows{
+                    position: initial;
+                    .glide__arrow--right{
+                        right: 0px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+
+@media screen and (max-width: 535px) {
+    .pioneers{
+        height: 65vh;
+        .pioneers-container{
+            .pioneers-glide{
+                position: relative;
+                max-width: 900px;
+                width: 100%;
+                height: 10px;
+                .card-name{
+                    h6{
+                        font-size: clamp(.5rem, 6vw, .6rem);
+                        color: $white-txt;
+                    }
+                    p{
+                        font-size: clamp(.5rem, 6vw, .6rem);
+                        color: $white-txt;
+                    }
+                   
+                }
+            }
+        }
+    }
+}

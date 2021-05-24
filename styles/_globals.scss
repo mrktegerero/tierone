@@ -1,0 +1,63 @@
+  
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 250ms ease;
+}
+
+$dark-bg: #080808;
+$white-txt: #FDFDFD;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: $dark-bg;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Bebas Neue", sans-serif;
+  color: $white-txt;
+}
+button {
+  background: $white-txt;
+  color: $dark-bg;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  &:hover {
+    opacity: 0.8 !important;
+  }
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(19, 19, 19);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(66, 66, 66);
+}
